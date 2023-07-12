@@ -109,7 +109,7 @@ mod_box_server <- function(input, output, session, file, file2){  #,batches,sim)
       ggplot2::scale_y_continuous(name = "log(freq. main)") +  # Continuous variable label
       ggplot2::scale_x_discrete(name = "Samples") +      # Group label
       #ggtitle("Boxplot from data frame SomaLogic") + # Plot title
-      ggplot2::theme(axis.line = element_line(colour = "black", # Theme customization
+      ggplot2::theme(axis.line = ggplot2::element_line(colour = "black", # Theme customization
                                      size = 0.25)) + theme_grey(base_size = 18) + ggplot2::theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
 
 
