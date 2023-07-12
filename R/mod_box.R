@@ -88,7 +88,7 @@ mod_box_server <- function(input, output, session, file, file2){  #,batches,sim)
     count2<-counts %>%
       rownames_to_column %>%
       gather(var, value, -rowname) %>%
-      spread(rowname, value)
+      tidyr::spread(rowname, value)
 
 
     rownames(count2)<-count2$var
