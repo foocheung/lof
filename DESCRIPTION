@@ -13,7 +13,7 @@ Imports:
     rlang,
     shiny (>= 1.7.4),
     shinydashboard,
-    use_dev_package('cran/DMwR'),
+    DMwR2,
     ggrepel,
     stats,
     shinyscreenshot,
