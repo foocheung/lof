@@ -86,7 +86,7 @@ mod_box_server <- function(input, output, session, file, file2){  #,batches,sim)
     rownames(counts)<-t(d[file2$rn()])
 
     count2<-counts %>%
-      tibble::rownames_to_column %>%
+      tibble::rownames_to_column() %>%
       tidyr::gather(var, value, -rowname) %>%
       tidyr::spread(rowname, value)
 
