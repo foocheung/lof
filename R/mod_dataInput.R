@@ -46,7 +46,7 @@ mod_dataInput_server <- function(id){
      # read.csv(userFile()$datapath, header=T, fill=TRUE, sep="\t")
 
 
-      read_tsv(userFile()$datapath)
+      readr::read_tsv(userFile()$datapath)
 
       # utils::read.table(userFile()$datapath,
       #                   header = FALSE,

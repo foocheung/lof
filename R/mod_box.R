@@ -70,24 +70,16 @@ mod_box_server <- function(input, output, session, file, file2){  #,batches,sim)
 
     req(file2$goButtonp())
 
-    rn2<<-file2$rn()
-    stst<<- file2$data_st()
-    rnrn<<- file2$rn()
 
-    ssss<<- file2$size()
-    wwwsize<<- file2$wsize()
-    kkkksize<<- file2$ksize()
-
-    dffff<<- file$df()
 
     d<-file$df() #%>%  dplyr::filter(drop_na(!! rlang::sym(input$rn)))
-    tttt<<-d
+
     d<- d %>%  dplyr::filter(!is.na(!! rlang::sym(file2$rn())))
 
 
     # ttt<<-"hello"
     counts<-d[, c(which(colnames(d) %in% file2$data_st()):length(d))]
-    ccoco<<-counts
+
     # counts <- a[41:length(a)]
     # rownames(counts) <- d$reposid
 
@@ -107,9 +99,6 @@ mod_box_server <- function(input, output, session, file, file2){  #,batches,sim)
     count3<-log(count3)
 
     #rownames(counts)
-
-
-    ccc3<<-count3
 
 
 ggplot(data = stack(count3), aes(x = ind, y = values)) +
