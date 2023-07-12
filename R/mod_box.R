@@ -101,16 +101,16 @@ mod_box_server <- function(input, output, session, file, file2){  #,batches,sim)
     #rownames(counts)
 
 
-    ggplot2::ggplot(data = stack(count3), aes(x = ind, y = values)) +
-      stat_boxplot(geom = "errorbar", # Boxplot with error bars
+    ggplot2::ggplot(data = stack(count3), ggplot2::aes(x = ind, y = values)) +
+      ggplot2::stat_boxplot(geom = "errorbar", # Boxplot with error bars
                    width = 0.2) +
-      geom_boxplot(fill = "#4271AE", colour = "#1F3552", # Colors
+      ggplot2::geom_boxplot(fill = "#4271AE", colour = "#1F3552", # Colors
                    alpha = 0.9, outlier.colour = "red") +
-      scale_y_continuous(name = "log(freq. main)") +  # Continuous variable label
-      scale_x_discrete(name = "Samples") +      # Group label
+      ggplot2::scale_y_continuous(name = "log(freq. main)") +  # Continuous variable label
+      ggplot2::scale_x_discrete(name = "Samples") +      # Group label
       #ggtitle("Boxplot from data frame SomaLogic") + # Plot title
-      theme(axis.line = element_line(colour = "black", # Theme customization
-                                     size = 0.25)) + theme_grey(base_size = 18) + theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
+      ggplot2::theme(axis.line = element_line(colour = "black", # Theme customization
+                                     size = 0.25)) + theme_grey(base_size = 18) + ggplot2::theme(axis.text.x = element_text(angle = 90, vjust = 0.5, hjust=1))
 
 
 
