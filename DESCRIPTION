@@ -13,7 +13,16 @@ Imports:
     OSAT,
     rlang,
     shiny (>= 1.7.4),
-    shinydashboard
+    shinydashboard,
+    DMwR,
+    ggrepel,
+    stats,
+    shinyscreenshot,
+    data.table,
+    ggfortify,
+    FactoMineR,
+    factoextra,
+    tidyverse
 Encoding: UTF-8
 LazyData: true
 RoxygenNote: 7.2.3
