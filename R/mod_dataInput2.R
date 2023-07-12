@@ -27,7 +27,7 @@ mod_dataInput_ui2 <- function(id){
 
               actionButton(ns("goButtonp"), "Go!",icon("paper-plane"),
               style="color: #fff; background-color: #337ab7; border-color: #2e6da4"),
-              screenshotButton(ns("scrB"),label="Captureentirepage")
+              shinyscreenshot::screenshotButton(ns("scrB"),label="Captureentirepage")
 
     ))
   )
