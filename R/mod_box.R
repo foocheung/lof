@@ -101,7 +101,7 @@ mod_box_server <- function(input, output, session, file, file2){  #,batches,sim)
     #rownames(counts)
 
 
-ggplot(data = stack(count3), aes(x = ind, y = values)) +
+    ggplot2::ggplot(data = stack(count3), aes(x = ind, y = values)) +
       stat_boxplot(geom = "errorbar", # Boxplot with error bars
                    width = 0.2) +
       geom_boxplot(fill = "#4271AE", colour = "#1F3552", # Colors
