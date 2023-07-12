@@ -94,7 +94,7 @@ mod_box_server <- function(input, output, session, file, file2){  #,batches,sim)
     rownames(count2)<-count2$var
     count3<-count2[2:length(count2)]
     rownames(count3)<-count2$var
-    count3<-count3 %>% mutate_if(is.character, as.numeric)
+    count3<-count3 %>% dplyr::mutate_if(is.character, as.numeric)
 
     count3<-log(count3)
 
