@@ -6,6 +6,7 @@ Authors@R:
 Description: What the package does (one paragraph).
 License: What license is it under?
 Imports:
+    tidyverse,
     config (>= 0.3.1),
     dplyr,
     DT,
@@ -21,7 +22,6 @@ Imports:
     ggfortify,
     factoextra,
     readr,
-    tidyverse,
     tidyr
 Encoding: UTF-8
 LazyData: true

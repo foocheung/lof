@@ -87,7 +87,7 @@ mod_lof_server <- function(input, output, session, file, file2){  #,batches,sim)
 
 
       a<-(file$df())
-      a <- a %>%  filter(!is.na(!! rlang::sym(file2$rn())) )
+      a <- a %>%  dplyr::filter(!is.na(!! rlang::sym(file2$rn())) )
 
 
 
