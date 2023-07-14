@@ -104,7 +104,7 @@ mod_lof_server <- function(input, output, session, file, file2){  #,batches,sim)
       data<-cbind(d[,1: c(which(colnames(d) %in% file2$data_st()))],
                   DMwR2::lofactor(d[, c(which(colnames(d) %in% file2$data_st()):length(d))], file2$ksize()))
 
-      data<-as.tibble(data)
+      data<-dplyr::as.tibble(data)
 
 
       colnames(data)[length(data)] <- "lof"
