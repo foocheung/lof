@@ -129,7 +129,7 @@ mod_lof_server <- function(input, output, session, file, file2){  #,batches,sim)
         factoextra::fviz_pca_ind( prcomp(dfdat, scale. = TRUE), pointsize = as.numeric(data$lof),
                       repel = TRUE ,
                       habillage  = as.factor(t(data[,file2$gp()])),addEllipses = TRUE #,title = #md()$infilename$name
-        )  +  theme_grey(base_size = 12)
+        )  +  ggplot2::theme_grey(base_size = 12)
       }
 
 
@@ -139,7 +139,7 @@ mod_lof_server <- function(input, output, session, file, file2){  #,batches,sim)
         factoextra::fviz_pca_ind(prcomp(dfdat, scale. = TRUE),
                      repel = TRUE ,
                      habillage  = as.factor(t(data[,file2$gp])),addEllipses = TRUE #,title = #md()$infilename$name
-        )  +  theme_grey(base_size = 12)
+        )  +  ggplot2::theme_grey(base_size = 12)
       }
 
       else{
@@ -151,7 +151,7 @@ mod_lof_server <- function(input, output, session, file, file2){  #,batches,sim)
           # col.ind = as.factor(t(data[,input$rn])), # Color by the quality of representation
           repel = TRUE#,title = #md()$infilename$name
           #, habillage  =as.factor(data$Group),addEllipses = TRUE
-        ) +  theme_grey(base_size = 12)
+        ) +  ggplot2::theme_grey(base_size = 12)
       }
 
 
