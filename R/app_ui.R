@@ -7,18 +7,16 @@
 #'
 ## usethis::use_pipe()
 app_ui <- function() {
-  tagList(
+#  tagList(
     # Leave this function for adding external resources
     # golem_add_external_resources(),
     # List the first level UI elements here
-    navbarPage(
-
+    shinyUI( pageWithSidebar(
+      HTML("<CENTER><H2>Anomaly detection with Local Outlier Factor (LOF)"),
+        # "",
       #theme="paper",
-      "Anomaly detection with Local Outlier Factor (LOF)",
       tabPanel(
-
-
-        "",
+  "Test Load Data",
         sidebarPanel(
           mod_dataInput_ui(
             "dataInput_ui_meta"
@@ -34,11 +32,12 @@ app_ui <- function() {
 
         mod_box_ui("tbl_box"),
         mod_lof_ui("lof_box")
-
+#)
         )
-      )
+ #     )
     )
   )
+)
 }
 
 

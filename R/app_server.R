@@ -1,7 +1,7 @@
 app_server <- function(input, output, session) {
   # List the first level callModules here
 
-  metafile <- mod_dataInput_server("dataInput_ui_meta")
+  metafile <<- mod_dataInput_server("dataInput_ui_meta")
 
   metafile2<-callModule(mod_dataInput_server2, "dataInput_ui_meta2", metafile)
   callModule(mod_box_server, "tbl_box", metafile,metafile2)

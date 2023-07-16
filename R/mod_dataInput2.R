@@ -15,8 +15,8 @@ mod_dataInput_ui2 <- function(id){
   tagList(
    # tabsetPanel(
     #  tabPanel(
-    shinydashboard::dashboardSidebar(
-      shinydashboard::sidebarMenu(id = "Options",
+   # shinydashboard::dashboardSidebar(
+    #  shinydashboard::sidebarMenu(id = "Options",
               sliderInput(inputId=ns("ksize"), label = "K", min=1, max=100, value=20, width=300,step = 1, ticks=T),
 
               sliderInput(ns("size"), label = "Plot Height Size:", min=300, max=2000, value=760, width=300,step = 10, ticks=T),
@@ -29,8 +29,9 @@ mod_dataInput_ui2 <- function(id){
               style="color: #fff; background-color: #337ab7; border-color: #2e6da4"),
               shinyscreenshot::screenshotButton(ns("scrB"),label="Captureentirepage")
 
-    ))
-  )
+    )
+
+ # )
 
 }
 
